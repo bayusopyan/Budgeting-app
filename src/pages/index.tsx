@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from 'components/Header'
+import Graph from 'components/ChartBudgeting'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
@@ -10,6 +11,11 @@ export default function Home() {
   return (
     <>
       <Header />
+      <div className='grid md:grid-cols-2 gap-4'>
+        {/* Chart */}
+        <Graph></Graph>
+        {/* Form */}
+      </div>
     </>
 
     // <>
