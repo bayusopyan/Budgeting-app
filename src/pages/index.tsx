@@ -1,20 +1,23 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Header from 'components/Header'
-import Graph from 'components/ChartBudgeting'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import styles from "@/styles/Home.module.css";
+import Graph from "@/components/chartBudgeting";
+import { Transaction } from "@/components/transaction";
+import { Header } from "@/components/common";
+// import Transaction from "@/components/Transaction/Transaction";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
       <Header />
-      <div className='grid md:grid-cols-2 gap-4'>
+      <div className="grid md:grid-cols-2 gap-4">
         {/* Chart */}
         <Graph></Graph>
         {/* Form */}
+        <Transaction></Transaction>
       </div>
     </>
 
@@ -130,5 +133,5 @@ export default function Home() {
     //     </div>
     //   </main>
     // </>
-  )
+  );
 }
